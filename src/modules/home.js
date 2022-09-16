@@ -1,6 +1,6 @@
-import icon from './icons8-restaurant-96.png';
+import icon from '../icons8-restaurant-96.png';
 
-export function createElements(document) {
+export function createElements() {
     // Create all necessary DOM elements
     const wrapper = document.createElement('div')
     const nav = document.createElement('nav');
