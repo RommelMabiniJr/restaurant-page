@@ -2,9 +2,13 @@
 export function createHomeSection() {
     // Create all necessary DOM elements
     const wrapper = document.createElement('div')
-    const header = document.createElement('header');
+    const header = document.createElement('div');
     const headline = document.createElement('h1');
     const subHeadline = document.createElement('h2')
+
+    wrapper.classList.add("home-section-con");
+    headline.classList.add("headline");
+    subHeadline.classList.add("sub-headline");
 
     // Add headline and sub-headline to header content
     headline.innerText = "Smoke, Sauce, & Suds";

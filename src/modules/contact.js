@@ -1,3 +1,5 @@
+import personbbq from '../undraw_barbecue_3x93-svg.png';
+
 // Contact Us
 
 // Thank you for visiting our restaurant's website! If you have any questions or comments, we'd love to hear from you.
@@ -17,7 +19,12 @@
 
 export const createContactSection = () => {
     const contactWrapper = document.createElement('div');
-    const contactHeader = document.createElement('h1');
+    const contactContent = document.createElement('div');
+    const contactIllustration = document.createElement('div');
+    const illustration = new Image();
+
+
+    const contactHeader = document.createElement('h1'); 
     const subHeadline = document.createElement('h2');
 
     const location = document.createElement('p');
@@ -46,8 +53,24 @@ export const createContactSection = () => {
     sunday.innerText = "Sunday: 12:00pm-9:00pm";
     endingText.innerText = "We look forward to serving you!";
 
+    illustration.src = personbbq;
+
     ulElement.append(ulHeader, mon_thu, fri_sat, sunday);
-    contactWrapper.append(contactHeader, subHeadline, location, phone, email, ulElement, endingText);
+    contactContent.append(contactHeader, subHeadline, location, phone, email, ulElement, endingText);
+    contactIllustration.appendChild(illustration)
+    contactWrapper.append(contactContent, contactIllustration);
+
+
+    contactWrapper.classList.add('contact-container');
+    contactContent.classList.add('contact-content');
+    contactIllustration.classList.add("contact-illustration");
+    contactHeader.classList.add('contact-heading');
+    subHeadline.classList.add('contact-subheadline');
+    location.classList.add("contact-location");
+    phone.classList.add("contact-phone");
+    email.classList.add("contact-email");
+
+
 
     return contactWrapper;
 }
