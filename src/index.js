@@ -1,33 +1,27 @@
-import icon from './icons8-restaurant-96.png';
+import './style.css';
 import { createHomeSection } from "./modules/home";
 import { createMenuSection } from './modules/menu';
 import { createContactSection } from './modules/contact';
-import { createBtn, createLogo, createThreePageTabs, createHeadertag, initializePageStructure, setupNav } from "./elementCreator.js";
-
-// console.log("Hi! I am called from index.js!");
-
+import { loadInitialPage } from './initialpageloader';
+import { createBtn, createLogo, createThreePageTabs, createHeadertag, setupNav } from "./elementCreator.js";
 
 
-
+// this initializes the page structure
 const mainContainer = document.querySelector('#content');
-
-// Create the NAV portion
-const logo = createLogo(icon);
-const restaurantName = createHeadertag('h3', "Edang's Barbecue House")
-const nav = setupNav(logo, restaurantName);
-
-// Create the Tab buttons for each section with a div container parent
-let homeBtn, contactBtn, menuBtn;
-homeBtn = createBtn('tab-btn', 'HOME');
-contactBtn = createBtn('tab-btn', 'CONTACT');
-menuBtn = createBtn('tab-btn', 'MENU');
-const pageTabsPortion = createThreePageTabs(homeBtn, menuBtn, contactBtn);
-
 const displayContent = document.createElement('div');
+displayContent.classList.add('display-area')
 
-mainContainer.append(nav, pageTabsPortion, displayContent);
+
+// Create background div
 
 
+loadInitialPage(mainContainer);
+
+
+mainContainer.appendChild(displayContent);
+
+// INITIALIZE LANDING SECTION WHICH IS HOME
+displayContent.appendChild(createHomeSection());
 
 
 
