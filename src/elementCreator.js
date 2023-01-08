@@ -41,6 +41,11 @@ export const createLogo = (iconSource) => {
 export const setupNav = (logo, companyName) => {
     const nav = createNav();
 
+    //add class names for css design
+    nav.classList.add("nav-container");
+    logo.classList.add('nav-logo-image');
+    companyName.classList.add('nav-logo-name');
+
     //append child elements
     nav.appendChild(logo);
     nav.appendChild(companyName);
@@ -57,11 +62,14 @@ export const createBtn = (className, textContent) => {
 }
 export const createThreePageTabs = (homeElem, menuElem, contactElem) => {
     const tabContainer = createContainer();
+
+    // added class names
+    tabContainer.classList.add('tab-container');
     tabContainer.append(homeElem, menuElem, contactElem);
     return tabContainer
 }
 
-export const initializePageStructure = () => {
-    const nav = createNav();
-    return nav;
-}
+// export const initializePageStructure = () => {
+//     const nav = createNav();
+//     return nav;
+// }
