@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Seymour+One&display=swap');
+
+/* font-family: 'Quicksand', sans-serif; */
+/* font-family: 'Seymour One', sans-serif; */
+
+
+html, body {
+    margin: 0;
+    height: auto;
+}
+
+body {
+    content: "";
+    background-image: url("emerson-vieira-_aR4l6fj6wQ-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -99;
+}
+
+.nav-container {
+    height: 80px;
+    display: flex;
+    background-color: #FBFEF9;
+    font-family: 'Seymour One', sans-serif;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.nav-logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.nav-logo-name {
+    font-size: 25px;
+}
+
+.tab-container {
+    height: calc(100vh - 80px);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #191923;
+}
+
+.tab-container .tab-btn {
+    flex: 1;
+    width: 100px;
+    border: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.tab-container .tab-btn:nth-child(1) {
+    background-color: #0E79B2;
+}
+
+.tab-container .tab-btn:nth-child(2) {
+    background-color: #BF1363;
+}
+
+.tab-container .tab-btn:nth-child(3) {
+    background-color: #F39237;
+}
+
+.tab-container .tab-btn:hover {
+    background-color: #ffffff00;
+}
+
+
+
+
+/* HOME SECTION DESIGN */
+.home-section-con {
+    padding: 50px;
+    margin-left: 100px;
+}
+
+.headline, .sub-headline {
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.headline {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 180px;
+}
+
+.sub-headline {
+    font-size: 30px;
+}
+
+
+
+/* MENU SECTION DESIGN */
+
+.menu-container {
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    background-color: #ffffff00;    
+}
+
+.menu-header {
+    text-align: center;
+    font-size: 50px;
+}
+
+.menu-container > div {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.menu-item {
+    background-color: #191923;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.food-item-list,
+.drinks-item-list {
+    width: 660px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.drinks-container h2 {
+    text-align: right;
+}
+
+.menu-item-img {
+    height: 200px;
+    width: 100%;
+}
+
+.menu-item_heading {
+    font-size: 23px;
+}
+
+.menu-item_details {
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+/* CONTACT US SECTION DESIGN */
+.contact-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color:#191923b0;
+    height: calc(100vh - 80px);
+}
+
+.contact-content {
+    color: #ffffff;     
+    font-family: 'Quicksand', sans-serif;
+    text-align: right;
+    width: 40vw;
+    padding: 10px;
+}
+
+.contact-illustration > img {
+    height: 400px;
+    width: 400px;
+    margin-right: 40px;
+}
